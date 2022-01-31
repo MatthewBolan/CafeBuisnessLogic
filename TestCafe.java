@@ -22,28 +22,43 @@ public class TestCafe {
 
         CafeUtil appTest = new CafeUtil();
 
+		System.out.println();
+
 
         System.out.println("----- Streak Goal Test -----");
+
+		System.out.println();
 
         
         System.out.printf("Purchases needed by week 10: %s \n", appTest.getStreakGoal());
 
+
+		System.out.println();
+
         
         System.out.println("----- Price Chart Test-----");
 
-            appTest.printPriceChart("Chai Latte Mix", 4.5, 3);
+            appTest.printPriceChart("Chai Latte Mix ", 4.5, 3);
             
-            appTest.printPriceChart("Specialty Coaster", 2.0, 5);
+            appTest.printPriceChart("Specialty Coaster ", 2.0, 5);
+
+		System.out.println();
 
 
 		System.out.println("----- Order Total Test-----");
+
+		System.out.println();
 
 		double[] lineItems = {3.5, 1.5, 4.0, 4.5};
 
 		System.out.printf("Order total: %s \n",appTest.getOrderTotal(lineItems));
 
+		System.out.println();
+
 
 		System.out.println("----- Display Menu Test-----");
+
+		System.out.println();
 
 		List<String> loadMenu = Arrays.asList( "drip coffee", "cappucino", "latte", "mocha" );
 
@@ -63,22 +78,26 @@ public class TestCafe {
 		
 		appTest.displayMenu(loadMenu, loadPrices);
 
+		System.out.println();
+
+	
+
 
 		System.out.println("----- Add Customer Test-----");
 
-		String userName = System.console().readLine();
+		System.out.println();
 
-		ArrayList<String> customers = new ArrayList<String>();
+        ArrayList<String> customers = new ArrayList<String>();
 
-		// Test 4 times
+         // --- Test 4 times ---
 
-		for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) {
 
-		appTest.addCustomer(customers, userName);
+            appTest.addCustomer(customers);
 
-		System.out.println(customers);
-
-		}
+            System.out.println("\n");
+		
+        }
 
 
 

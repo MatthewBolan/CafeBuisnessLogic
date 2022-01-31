@@ -6,6 +6,8 @@ import java.util.List;
 
 public class CafeUtil {
 
+
+
         public int getStreakGoal() {
 
         int sum = 0;
@@ -27,12 +29,19 @@ public class CafeUtil {
 
         public void printPriceChart(String productName, double price, int maxNumber) {
 
+            double totalPrice = 0;
 
         for( int order = 1; order <= maxNumber; order++) {
 
-            System.out.printf(productName + "\n" + order + "\n" + price);
+            totalPrice = price * order;
 
-            price+=price;
+            System.out.println();
+
+            System.out.printf("Product: " + productName + "\n" + "Quantity: " + order + "\n" + "Total: " + totalPrice);
+
+            System.out.println();
+
+            
 
         }
 
@@ -67,7 +76,7 @@ public class CafeUtil {
 
             for (int item=0; item<loadMenu.size(); item++){
 
-                System.out.println (loadMenu.get(item) + "$" + loadPrices.get(item));
+                System.out.println (loadMenu.get(item) + " $" + loadPrices.get(item));
             }
 
         }
@@ -77,9 +86,19 @@ public class CafeUtil {
 
 
 
-        public void addCustomer (ArrayList<String> customers, String userName) {
+        public void addCustomer (ArrayList<String> customers) {
+
+            System.out.println("Please enter your name:");
+
+            String userName = System.console().readLine();
+
+            System.out.println("Hello " + userName + "!");
+
+            System.out.println("There are " + (customers.size()) + " people in front of you");
 
             customers.add(userName);
+
+            System.out.println(customers);
 
         }
 
